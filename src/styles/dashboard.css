@@ -1,0 +1,303 @@
+.dashboard-container {
+    /* background-color: red; */
+    padding: 2rem;
+
+}
+
+.dashboard-container h2 {
+    font-size: 3rem;
+}
+
+.dashboard-container h3 {
+    font-size: 2rem;
+}
+
+.dashboard-filter {
+    /* background-color: yellow; */
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dashboard-filter select {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.filter-btn {
+    padding: 6px 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+    font-family: "sub-heading";
+}
+
+.filter-btn:hover {
+    background-color: #ffffff;
+}
+
+.dashboard-table {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+.dashboard-table th {
+    /* background-color: red; */
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    cursor: default;
+}
+
+.dashboard-table .sort-th {
+    cursor: pointer;
+}
+
+.dashboard-table .active-sort {
+    text-decoration: underline;
+    color: blue;
+}
+
+.dashboard-table td {
+    /* background-color: red; */
+    padding: 1.5rem;
+    text-align: center;
+    border: 2px solid black;
+    font-size: 1rem;
+}
+
+.table-btn {
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: #F97316;
+    cursor: pointer;
+    font-size: 14px;
+    color: #FFF7ED;
+    transition: all 0.3s ease-in-out;
+    font-family: "sub-heading";
+}
+
+.table-btn:hover {
+    background-color: #FFF7ED;
+    color: #F97316;
+    border: 2px solid #F97316;
+    transform: scale(1.1);
+}
+
+.dashboard-positive {
+    color: green;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.dashboard-negative {
+    color: red;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.dashboard-neutral {
+    color: grey;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.dashboard-table .comment {
+    text-align: justify;
+}
+
+.tab-container {
+    display: flex;
+    /* background-color: red; */
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* .tab {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f5f5dc;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid #000;
+    transition: all 0.3s ease-in-out;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tab.active {
+    background-color: #000;
+    color: white;
+}
+
+/* From Uiverse.io by SujitAdroja */
+.tab {
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #000;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    font-family: "sub-heading";
+}
+
+.tab:hover {
+    color: white;
+}
+
+.tab::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: #000;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.tab:hover::before {
+    width: 160%;
+}
+
+
+
+.edit-mode {
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #000;
+    padding: 6px 16px;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.edit-mode:hover {
+    color: white;
+}
+
+.edit-mode::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: #000;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.edit-mode:hover::before {
+    width: 160%;
+}
+
+
+
+
+
+
+.filter-btnn {
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #000;
+    padding: 6px 16px;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.filter-btnn:hover {
+    color: white;
+}
+
+.filter-btnn::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: #000;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.filter-btnn:hover::before {
+    width: 160%;
+}
+
+
+
+
+.table-btnn {
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #000;
+    padding: 6px 16px;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    font-family: "sub-heading";
+}
+
+.table-btnn:hover {
+    color: white;
+}
+
+.table-btnn::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: #000;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.table-btnn:hover::before {
+    width: 160%;
+}
