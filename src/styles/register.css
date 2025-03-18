@@ -37,9 +37,9 @@
  }
 
  .register-card {
-     background-color: #3674B5;
-     height: 70%;
-     width: 25%;
+     background-color: #f5f5f5;
+     height: 80%;
+     width: 30%;
      padding: 3rem;
      display: flex;
      flex-direction: column;
