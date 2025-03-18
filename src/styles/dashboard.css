@@ -301,3 +301,60 @@
 .table-btnn:hover::before {
     width: 160%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.confirm-btn {
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #000;
+    padding: 6px 16px;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    font-family: "sub-heading";
+}
+
+.confirm-btn:hover {
+    color: white;
+}
+
+.confirm-btn::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: #000;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.confirm-btn:hover::before {
+    width: 160%;
+}
+
+

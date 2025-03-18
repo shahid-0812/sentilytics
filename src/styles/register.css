@@ -54,7 +54,7 @@
 
  .register-card h1 {
      font-size: 3.5rem;
-     color: #fff;
+     color: #202020;
      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
  }
 
@@ -70,13 +70,13 @@
  .register-form label {
      font-family: "sub-heading";
      font-size: 1rem;
-     color: #fff;
+     color: #202020;
      margin-bottom: 0rem;
  }
 
  .register-input {
      padding: 1rem;
-     border: none;
+     border: 2px solid #202020;
      width: 100%;
      border-radius: 0.5rem;
      font-family: "sub-heading";
@@ -93,16 +93,16 @@
      padding: 1rem 2rem;
      border-radius: 0.5rem;
      font-family: "sub-heading";
-     border: 2px solid transparent;
+     border: 2px solid #202020;
      background-color: #fff;
-     color: #3674B5;
+     color: #000;
      font-size: 1.25rem;
      cursor: pointer;
      transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
  }
 
  .register-btn:hover {
-     background-color: #3674B5;
+     background-color: #202020;
      transform: scale(1.05);
      border: 2px solid #fff;
      color: #fff;
@@ -114,11 +114,12 @@
 
  .register-form p {
      font-family: "sub-heading";
-     color: #fff;
+     color: #000;
      font-size: 0.9rem;
      margin-top: 0.5rem;
  }
 
  .register-form a {
-     color: #fff;
+     color: #000;
+     text-decoration: underline;
  }

@@ -239,7 +239,9 @@ const Dashboard = () => {
                                             {editMode ?
                                                 (!comment.is_updated ? (
                                                     <><td>
-                                                        <button onClick={() => handleSubmitEdit(comment)} disabled={loadingEdits[comment.id]}>
+                                                        <button onClick={() => handleSubmitEdit(comment)} disabled={loadingEdits[comment.id]}
+                                                            className="confirm-btn"
+                                                        >
                                                             {loadingEdits[comment.id] ? "Saving..." : "Confirm"}
                                                         </button>
                                                     </td>
