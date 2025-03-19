@@ -11,6 +11,7 @@ import UseSentilytics from "./pages/use_sentilytics";
 import About from "./pages/about";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import NavbarOpt from "./components/NavbarOpt";
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function AppContent() {
 
   return (
     <div className="app-layout">
-      {showNavbar && <Navbar />}
+      {/* {showNavbar && <Navbar />} */}
+      {showNavbar && <NavbarOpt />}
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
