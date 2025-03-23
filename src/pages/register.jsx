@@ -71,7 +71,9 @@ function Register() {
                     <input type="password" name="confirmPassword" className="register-input" value={formData.confirmPassword} onChange={handleChange} required />
 
                     <p>Already have an account? <Link to="/login" className="link">Log in</Link></p>
-                    <input type="submit" value="Register" className="register-btn" />
+                    <div className="register-btn">
+                        <input type="submit" value="Submit" className="register-top" />
+                    </div>
                 </form>
             </div>
         </motion.div>

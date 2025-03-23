@@ -24,7 +24,7 @@ const NavbarOpt = () => {
 
     const handleLogout = () => {
         localStorage.removeItem("token");
-        alert("Logged out successfully!");
+        // alert("Logged out successfully!");
         navigate("/login");
         window.location.reload();
     };
@@ -40,6 +40,11 @@ const NavbarOpt = () => {
 
             <nav className={`navigation ${isNavVisible ? 'visible' : ''}`}>
                 <div className="nav-buttons">
+                    <Link className='nav-btn' to="/single_comment">
+                        <span className="btn-top">
+                            <i className="bi bi-file-earmark"></i> Single Comments
+                        </span>
+                    </Link>
                     <Link className='nav-btn' to="/multi_comment">
                         <span className="btn-top">
                             <i className="bi bi-file-earmark"></i> File Comments

@@ -41,11 +41,26 @@ const Navbar = () => {
         }
     }, []);
 
-    const handleLogout = () => {
-        localStorage.removeItem("token");
-        alert("Logged out successfully!");
-        navigate("/login");
-        window.location.reload();
+    const handleLogout = async () => {
+        const token = localStorage.getItem("token");
+        try {
+            const response = await fetch('http://127.0.0.1:8000/api/logout/', {
+                method: "POST",
+                headers: {
+                    Authorization: `Token ${token}`,
+                },
+            });
+            if (response.ok) {
+                localStorage.removeItem("token");
+                localStorage.removeItem("username");
+                alert("Logged out successfully!");
+                navigate("/");
+                window.location.reload();
+            }
+        }
+        catch (error) {
+            console.error("Error during loging out:", error);
+        }
     };
 
     return (
@@ -61,6 +76,12 @@ const Navbar = () => {
                 <nav className={`navigation ${isNavVisible ? 'visible' : ''}`}>
 
                     <div className="nav-buttons">
+                        <Link className='nav-btn' to="single_comment">
+                            <span className="btn-top">
+                                <i class="bi bi-chat"></i>
+                                <p>Single Comment</p>
+                            </span>
+                        </Link>
                         <Link className='nav-btn' to="/multi_comment">
                             <span className="btn-top">
                                 <i className="bi bi-file-earmark"></i>
@@ -73,6 +94,7 @@ const Navbar = () => {
                                 <p>Youtube Comments</p>
                             </span>
                         </Link>
+
                     </div>
 
                     {/* <Link to="/multi_comment" className='nav-link'>
@@ -96,7 +118,7 @@ const Navbar = () => {
                                 {isDropdownVisible && (
                                     <div ref={dropdownRef} className="dropdown-menu">
                                         <p className="dropdown-item username">{localStorage.getItem("username")}</p> {/* Display Username */}
-                                        <Link to="/dashboard" className="dropdown-item clickable">Dashboard</Link>
+                                        <Link to="/dashboard/stats" className="dropdown-item clickable">Dashboard</Link>
                                         <button className="dropdown-item clickable" onClick={handleLogout}>Log out</button>
                                     </div>
                                 )}

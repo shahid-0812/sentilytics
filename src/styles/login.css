@@ -60,7 +60,7 @@
 .login-form {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     gap: .5rem;
@@ -87,7 +87,7 @@
 }
 
 
-.login-btn {
+/* .login-btn {
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     font-family: "sub-heading";
@@ -97,17 +97,43 @@
     cursor: pointer;
     border: 2px solid #202020;
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+} */
+
+.login-btn {
+    --button_radius: 0.75em;
+    --button_color: #ffffff;
+    --button_outline_color: #000000;
+    font-weight: bold;
+    width: 100%;
+    padding: 1;
+    background-color: var(--button_outline_color);
+    border-radius: var(--button_radius);
+    align-self: center;
+    margin: 1rem 0;
 }
 
-.login-btn:hover {
-    background-color: #202020;
-    transform: scale(1.05);
-    border: 2px solid #fff;
-    color: #fff;
+.login-top {
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    font-family: "sub-heading";
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
 }
 
-.login-btn:active {
-    transform: scale(0.9);
+.login-btn:hover .login-top {
+    transform: translateY(-0.33em);
+}
+
+.login-btn:active .login-top {
+    transform: translateY(0);
 }
 
 .login-form p {

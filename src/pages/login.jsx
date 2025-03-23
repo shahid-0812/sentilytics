@@ -64,7 +64,10 @@ function Login() {
                     <label htmlFor="">Password : </label>
                     <input type="password" name="password" className="login-input" value={formData.password} onChange={handleChange} />
                     <p>Need Account? <Link to="/register" className="link">Create an account</Link></p>
-                    <input type="submit" value="Submit" className="login-btn" />
+                    {/* <input type="submit" value="Submit" className="login-btn" /> */}
+                    <div className="login-btn">
+                        <input type="submit" value="Log in" className="login-top" />
+                    </div>
                 </form>
             </div>
         </motion.div>

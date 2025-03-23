@@ -1,5 +1,5 @@
 .batch-container {
-    /* background-color: red; */
+    flex-grow: 1;
     padding: 1rem;
 }
 
@@ -14,35 +14,30 @@
     margin-bottom: 2rem;
 }
 
-/* .filter-comment {
+
+.loading-align {
     display: flex;
-    gap: 2rem;
-    font-size: 1.5rem;
-    padding: 1rem 0;
-    align-items: center;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;  /* Centers vertically */
+    height: 100%;
+    width: 100%;
 }
-
-.filter-comment select {
-    border-radius: 0.5rem;
-    padding: 0.4rem;
-} */
-
 .batch-table {
     border-collapse: collapse;
-    border: 1px solid;
+    border: 2px solid black;
 }
 
 .batch-table th {
     padding: 1rem;
     font-size: 1.2rem;
-    border: 1px solid;
+    border: 2px solid black;
     user-select: none;
 }
 
 .batch-table td {
     padding: 1rem;
     text-align: center;
-    border: 1px solid;
+    border: 2px solid black;
     font-size: 1rem;
 }
 
@@ -50,12 +45,7 @@
     text-align: justify;
 }
 
-.batch-chart {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
+
 .batch-chart h3{
     font-size: 2rem;
 }
@@ -82,4 +72,7 @@
     color: grey;
     text-transform: capitalize;
     font-weight: bold;
+}
+.loading{
+    margin: auto 0;
 }
