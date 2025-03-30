@@ -184,7 +184,11 @@ const Dashboard = () => {
                     <h3>Your Single Comments</h3>
                     <div className="dashboard-filter">
                         <p>Note: If the model predicted a comment sentiment incorrectly, you can correct it below.</p>
-                        <button className="edit-mode" onClick={toggleEditMode}>{editMode ? "Exit Edit Mode" : "Enable Edit Mode"}</button>
+
+                        <div className="btn-l-top">
+                            <button onClick={toggleEditMode} className="btn-l">{editMode ? "Exit Edit Mode" : "Enable Edit Mode"}</button>
+                        </div>
+
                         <label>Filter by Sentiment:</label>
                         <select value={filterSentiment} onChange={(e) => setFilterSentiment(e.target.value)}>
                             <option value="">All</option>
@@ -193,7 +197,10 @@ const Dashboard = () => {
                             <option value="neutral">Neutral</option>
                         </select>
 
-                        <button onClick={() => handleFilter('single')} className="filter-btnn">Apply Filters</button>
+                        <div className="btn-l-top">
+                            <button onClick={() => handleFilter('single')} className="btn-l">Apply Filters</button>
+                        </div>
+
                     </div>
                     {filteredSingleComments.length > 0 ? (
                         <table border="1" width="100%" cellPadding="8" className="dashboard-table">

@@ -42,7 +42,7 @@ const NavbarOpt = () => {
                 <div className="nav-buttons">
                     <Link className='nav-btn' to="/single_comment">
                         <span className="btn-top">
-                            <i className="bi bi-file-earmark"></i> Single Comments
+                            <i className="bi bi-chat"></i> Single Comments
                         </span>
                     </Link>
                     <Link className='nav-btn' to="/multi_comment">
@@ -58,15 +58,13 @@ const NavbarOpt = () => {
                 </div>
 
                 {isLoggedIn ? (
-                    <div className="home-profile" onClick={() => setIsDropdownVisible(!isDropdownVisible)} ref={dropdownRef}>
+                    <div className={`home-profile ${isDropdownVisible ? 'active' : ''}`} onClick={() => setIsDropdownVisible(!isDropdownVisible)} ref={dropdownRef}>
                         <i className="bi bi-person-fill"></i>
-                        {isDropdownVisible && (
-                            <div className="dropdown-menu">
-                                <p className="dropdown-item username">{localStorage.getItem("username")}</p>
-                                <Link to="/dashboard" className="dropdown-item clickable">Dashboard</Link>
-                                <button className="dropdown-item clickable" onClick={handleLogout}>Log out</button>
-                            </div>
-                        )}
+                        <div className="dropdown-menu">
+                            <p className="dropdown-item username">{localStorage.getItem("username")}</p>
+                            <Link to="/dashboard" className="dropdown-item clickable">Dashboard</Link>
+                            <button className="dropdown-item clickable" onClick={handleLogout}>Log out</button>
+                        </div>
                     </div>
                 ) : (
                     <>

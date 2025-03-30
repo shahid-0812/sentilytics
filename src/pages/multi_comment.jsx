@@ -152,16 +152,22 @@ const MultiComment = () => {
                             </div></div>
                     ) : analyzedComments.length > 0 ? (
                         <>
-                            <button onClick={() => navigate(`/batch/${batchId}`)} className="detail-btn">Get More Details</button>
-                            {activeTab === "comments" ? <DownloadButton batch_Id={batchId} comment_type={analyzedComments.comment_type} />
-                                : <button className="btn-download" onClick={downloadChart}>Download Chart</button>}
                             <div className="tab-container">
-                                <button className={`tab ${activeTab === "comments" ? "active" : ""}`} onClick={() => setActiveTab("comments")}>
-                                    Comments
-                                </button>
-                                <button className={`tab ${activeTab === "chart" ? "active" : ""}`} onClick={() => setActiveTab("chart")}>
-                                    Charts
-                                </button>
+                                <div className="btn-x-top">
+                                    <button onClick={() => navigate(`/batch/${batchId}`)} className="btn-x">Get More Details</button>
+                                </div>
+                                {
+                                    activeTab === "comments" ? <DownloadButton batch_Id={batchId} comment_type={analyzedComments.comment_type} />
+                                        : <div className="btn-x-top">
+                                            <button className="btn-x" onClick={downloadChart}>Download Chart</button>
+                                        </div>
+                                }
+                                <div className="btn-x-top">
+                                    <button onClick={() => setActiveTab("comments")} className={`btn-x ${activeTab === "comments" ? "active" : ""}`} > Comments</button>
+                                </div>
+                                <div className="btn-x-top">
+                                    <button onClick={() => setActiveTab("chart")} className={`btn-x ${activeTab === "chart" ? "active" : ""}`} > Charts</button>
+                                </div>
                             </div>
 
                             {activeTab === "chart" && (
@@ -226,7 +232,7 @@ const MultiComment = () => {
                         <p>No analyzed comments yet.</p>
                     )
                 }
-            </div>
+            </div >
         </>
     );
 };

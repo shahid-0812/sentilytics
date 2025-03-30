@@ -45,16 +45,19 @@ function SingleComment() {
         <div className="single-comment">
             <h1>Try Sentilytics</h1>
             <form className="single-form" onSubmit={handleSubmit}>
-                <input 
-                    type="text" 
-                    name="text" 
-                    placeholder="Enter Your Comment" 
+                <input
+                    type="text"
+                    name="text"
+                    placeholder="Enter Your Comment"
                     className="single-input"
-                    value={text} 
+                    value={text}
                     onChange={(e) => setText(e.target.value)}
                 />
-                <input type="submit" value={loading ? "Analyzing..." : "Submit"} className="single-submit" disabled={loading} />
-                
+
+                <div className="submit-top">
+                    <input type="submit" value={loading ? "Analyzing..." : "Submit"} className="multi-submit" disabled={loading} />
+                </div>
+
                 {analyzedComment && (
                     <div className="analysis-result">
                         <h2 className={`single-${analyzedComment.sentiment}`}>Sentiment: {analyzedComment.sentiment}</h2>

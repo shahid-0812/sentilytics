@@ -6,7 +6,7 @@ import { useState } from "react";
 function Register() {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
-        name: "",
+        username: "",
         email: "",
         password: "",
         confirmPassword: "",
@@ -28,7 +28,7 @@ function Register() {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    username: formData.name,
+                    username: formData.username,
                     email: formData.email,
                     password: formData.password,
                 }),
@@ -37,6 +37,7 @@ function Register() {
             const data = await response.json();
             if (response.ok) {
                 localStorage.setItem("token", data.token);
+                localStorage.setItem("username", formData.username);
                 alert("Registered successfully!");
                 navigate("/");
             } else {
@@ -59,7 +60,7 @@ function Register() {
                 <h1 className="register-heading">Register</h1>
                 <form onSubmit={handleSubmit} className="register-form">
                     <label>Name:</label>
-                    <input type="text" name="name" className="register-input" value={formData.name} onChange={handleChange} required />
+                    <input type="text" name="username" className="register-input" value={formData.name} onChange={handleChange} required />
 
                     <label>Email:</label>
                     <input type="email" name="email" className="register-input" value={formData.email} onChange={handleChange} required />
