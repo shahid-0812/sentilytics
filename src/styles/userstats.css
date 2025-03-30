@@ -50,6 +50,9 @@
   padding: 2rem 0;
   background-color: #F7F4EF;
   /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .chart-div {
@@ -122,5 +125,147 @@
 }
 
 .btn-l-top:active .btn-l {
+  transform: translateY(.01em);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-m-top {
+  width: 10rem;
+  --button_radius: 0.75em;
+  --button_color: #ffffff;
+  --button_outline_color: #000000;
+  font-weight: bold;
+  background-color: var(--button_outline_color);
+  border-radius: var(--button_radius);
+}
+
+.active {
+  background-color: red;
+}
+
+.btn-m {
+  cursor: pointer;
+  font-size: 12px;
+  font-family: "sub-heading";
+  width: 10rem;
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-.3em);
+  transition: transform 0.1s ease;
+}
+
+
+.btn-m-top:hover .btn-m {
+  transform: translateY(-0.2em);
+}
+
+.btn-m-top:active .btn-m {
   transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-dash-top {
+  width: 14rem;
+  --button_radius: 0.75em;
+  --button_color: #ffffff;
+  --button_outline_color: #000000;
+  font-weight: bold;
+  background-color: var(--button_outline_color);
+  border-radius: var(--button_radius);
+}
+
+.active {
+  background-color: red;
+}
+
+.btn-dash {
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "sub-heading";
+  font-weight: 100;
+  width: 14rem;
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-.3em);
+  transition: transform 0.1s ease;
+  text-decoration: none;
+}
+
+
+.btn-dash-top:hover .btn-dash {
+  transform: translateY(-0.2em);
+}
+
+.btn-dash-top:active .btn-dash {
+  transform: translateY(0);
+}
+
+.btn-dash i {
+  margin-right: 10px;
+}
+
+
+
+
+
+
+.btn-filter {
+  font-family: "sub-heading";
+  font-size: 0.8rem;
+  align-items: center;
+  height: 2.4rem;
+  border-radius: 0.4rem;
+  font-weight: 600;
+  padding: 0 1.2rem;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(143, 142, 142, 0.15) !important;
+  background: #fff;
+  transition: 0.2s ease-in;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.btn-filter:hover {
+  background: #dfdfdf;
 }

@@ -79,9 +79,9 @@ const UserStats = () => {
             <div className="date-filters">
                 <DatePicker className="date-picker" selected={startDate} maxDate={endDate ? endDate : new Date()} onChange={(date) => setStartDate(date)} placeholderText="Start Date" />
                 <DatePicker className="date-picker" selected={endDate} maxDate={new Date()} minDate={startDate} onChange={(date) => setEndDate(date)} placeholderText="End Date" />
-                <div className="btn-l-top">
-                    <button onClick={fetchStats} className="btn-l">Apply Filter</button>
-                </div>
+
+                <button onClick={fetchStats} className="btn-filter">Apply Filter</button>
+
             </div>
 
             {/* Stats */}
@@ -93,7 +93,7 @@ const UserStats = () => {
 
             {/* Charts */}
             <div className="chart-container">
-                <h2>Sentiment Distribution</h2>
+                {/* <h2>Sentiment Distribution</h2> */}
                 <div className="chart-div">
                     <div className="chart">
                         <Bar data={sentimentData} />

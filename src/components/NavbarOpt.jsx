@@ -58,13 +58,15 @@ const NavbarOpt = () => {
                 </div>
 
                 {isLoggedIn ? (
-                    <div className={`home-profile ${isDropdownVisible ? 'active' : ''}`} onClick={() => setIsDropdownVisible(!isDropdownVisible)} ref={dropdownRef}>
+                    <div className="home-profile" onClick={() => setIsDropdownVisible(!isDropdownVisible)} ref={dropdownRef}>
                         <i className="bi bi-person-fill"></i>
-                        <div className="dropdown-menu">
-                            <p className="dropdown-item username">{localStorage.getItem("username")}</p>
-                            <Link to="/dashboard" className="dropdown-item clickable">Dashboard</Link>
-                            <button className="dropdown-item clickable" onClick={handleLogout}>Log out</button>
-                        </div>
+                        {isDropdownVisible && (
+                            <div className="dropdown-menu">
+                                <p className="dropdown-item username">{localStorage.getItem("username")}</p>
+                                <Link to="/dashboard" className="dropdown-item clickable">Dashboard</Link>
+                                <button className="dropdown-item clickable" onClick={handleLogout}>Log out</button>
+                            </div>
+                        )}
                     </div>
                 ) : (
                     <>

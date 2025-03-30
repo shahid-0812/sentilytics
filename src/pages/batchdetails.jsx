@@ -198,7 +198,7 @@ const BatchDetails = () => {
             </div>
             {activeTab === "chart" && (
                 <div className="chart-container">
-                    <h2>Sentiment Distribution</h2>
+                    {/* <h2>Sentiment Distribution</h2> */}
                     <div className="chart-div">
                         <div className="chart">
                             <Bar ref={barRef} data={sentimentData} />

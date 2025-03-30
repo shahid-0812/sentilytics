@@ -197,9 +197,8 @@ const Dashboard = () => {
                             <option value="neutral">Neutral</option>
                         </select>
 
-                        <div className="btn-l-top">
-                            <button onClick={() => handleFilter('single')} className="btn-l">Apply Filters</button>
-                        </div>
+
+                        <button onClick={() => handleFilter('single')} className="btn-filter">Apply Filter</button>
 
                     </div>
                     {filteredSingleComments.length > 0 ? (
@@ -294,7 +293,11 @@ const Dashboard = () => {
                         <option value="neutral">Neutral</option>
                     </select>
 
-                    <button onClick={() => handleFilter('batch')} className="filter-btn">Apply Filters</button>
+
+
+                    <button onClick={() => handleFilter('single')} className="btn-filter">Apply Filters</button>
+
+
                 </div>
 
                 {filteredBatches.length > 0 ? (

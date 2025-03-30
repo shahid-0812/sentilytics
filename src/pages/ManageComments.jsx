@@ -166,7 +166,7 @@ const ManageComments = () => {
                 <h3>Your Single Comments</h3>
                 <div className="dashboard-filter">
                     <p>Note: If the model predicted a comment sentiment incorrectly, you can correct it below.</p>
-                    <button className="edit-mode" onClick={toggleEditMode}>{editMode ? "Exit Edit Mode" : "Enable Edit Mode"}</button>
+                    <button className="btn-filter" onClick={toggleEditMode}>{editMode ? "Exit Edit Mode" : "Enable Edit Mode"}</button>
                     <label>Filter by Sentiment:</label>
                     <select value={filterSentiment} onChange={(e) => setFilterSentiment(e.target.value)}>
                         <option value="">All</option>
@@ -175,7 +175,7 @@ const ManageComments = () => {
                         <option value="neutral">Neutral</option>
                     </select>
 
-                    <button onClick={() => handleFilter('single')} className="filter-btnn">Apply Filters</button>
+                    <button onClick={() => handleFilter('single')} className="btn-filter">Apply Filters</button>
                 </div>
                 {loading ? (
                     <div class="text-center loading-align">
@@ -219,6 +219,7 @@ const ManageComments = () => {
                                                         value={editedValue[comment.id] || comment.sentiment}
                                                         onChange={(e) => setEditedValue((prev) => ({ ...prev, [comment.id]: e.target.value }))}
                                                         disabled={loadingEdits[comment.id]}
+                                                        className="edit-filter"
                                                     >
                                                         <option value="positive">Positive</option>
                                                         <option value="negative">Negative</option>
@@ -229,31 +230,32 @@ const ManageComments = () => {
                                             ) : (<td className={`dashboard-${comment.sentiment}`}>{comment.sentiment || "N/A"}</td>
                                             ))}
                                             {editMode ?
-                                                (!comment.is_updated ? (
-                                                    <><td>
-                                                        <button
-                                                            className="confirm-btn"
-                                                            onClick={() => handleSubmitEdit(comment)} disabled={loadingEdits[comment.id]}>
-                                                            {loadingEdits[comment.id] ? "Saving..." : "Confirm"}
-                                                        </button>
-                                                    </td>
-                                                        <td>
-                                                            <button onClick={() => handleDelete(comment.id)} className="confirm-btn">Delete</button>
+                                                (
+                                                    !comment.is_updated ? (
+                                                        <><td>
+                                                            <button
+                                                                className="btn-filter"
+                                                                onClick={() => handleSubmitEdit(comment)} disabled={loadingEdits[comment.id]}>
+                                                                {loadingEdits[comment.id] ? "Saving..." : "Confirm"}
+                                                            </button>
                                                         </td>
-                                                        <td>---</td></>
-                                                ) : <>
-                                                    <td>{comment.feedback_verified === null
-                                                        ? `Suggestion : ${comment.corrected_sentiment}`
-                                                        : comment.feedback_verified === true
-                                                            ? `Prediction Error : ${comment.predicted_sentiment}`
-                                                            : `Suggested : ${comment.corrected_sentiment}`}</td>
+                                                            <td>
+                                                                <button onClick={() => handleDelete(comment.id)} className="btn-filter">Delete</button>
+                                                            </td>
+                                                            <td>---</td></>
+                                                    ) : <>
+                                                        <td>{comment.feedback_verified === null
+                                                            ? `Suggestion : ${comment.corrected_sentiment}`
+                                                            : comment.feedback_verified === true
+                                                                ? `Prediction Error : ${comment.predicted_sentiment}`
+                                                                : `Suggested : ${comment.corrected_sentiment}`}</td>
 
-                                                    <td>{comment.feedback_verified === null
-                                                        ? "Sentiment correction Pending..."
-                                                        : comment.feedback_verified === true
-                                                            ? "Sentiment Verified"
-                                                            : "model predicted correctly"}</td>
-                                                </>
+                                                        <td>{comment.feedback_verified === null
+                                                            ? "Sentiment correction Pending..."
+                                                            : comment.feedback_verified === true
+                                                                ? "Sentiment Verified"
+                                                                : "model predicted correctly"}</td>
+                                                    </>
                                                 )
                                                 : <td>{comment?.feedback_verified === true ? "---" : comment.score}</td>
                                             }

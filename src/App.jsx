@@ -49,29 +49,29 @@ const DashboardLayout = () => {
 
 function AppContent() {
   return (
-<Routes>
-  {/* General routes for non-dashboard pages */}
-  <Route path="/" element={<UserLayout />}>
-    <Route index element={<Homeopt />} />
-    <Route path="multi_comment" element={<MultiComment />} />
-    <Route path="youtube_comment" element={<YoutubeComment />} />
-    <Route path="single_comment" element={<SingleComment />} />
-    <Route path="about" element={<About />} />
-  </Route>
-  {/* Auth Routes (No Layout) */}
-  <Route path="/login" element={<Login />} />
-  <Route path="/register" element={<Register />} />
+    <Routes>
+      {/* General routes for non-dashboard pages */}
+      <Route path="/" element={<UserLayout />}>
+        <Route index element={<Homeopt />} />
+        <Route path="multi_comment" element={<MultiComment />} />
+        <Route path="youtube_comment" element={<YoutubeComment />} />
+        <Route path="single_comment" element={<SingleComment />} />
+        <Route path="about" element={<About />} />
+      </Route>
+      {/* Auth Routes (No Layout) */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
 
-  {/* Dashboard routes, nested under /dashboard */}
-  <Route path="/dashboard" element={<DashboardLayout />}>
-    <Route path="stats" element={<UserStats />} />
-    <Route path="comments" element={<ManageComments />} />
-    <Route path="batch" element={<ManageBatch />} />
-    <Route path="batch/:batch_id" element={<BatchDetails />} />
-  </Route>
-  {/* Page Not Found */}
-  <Route path="*" element={<PageNotFound />} />
-</Routes>
+      {/* Dashboard routes, nested under /dashboard */}
+      <Route path="/dashboard" element={<DashboardLayout />}>
+        <Route path="stats" element={<UserStats />} />
+        <Route path="comments" element={<ManageComments />} />
+        <Route path="batch" element={<ManageBatch />} />
+        <Route path="batch/:batch_id" element={<BatchDetails />} />
+      </Route>
+      {/* Page Not Found */}
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
   );
 }
 

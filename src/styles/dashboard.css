@@ -4,6 +4,7 @@
 
 .dashboard-main-content {
     flex-grow: 1;
+    padding: 2rem 3rem;
 }
 
 .dashboard-container {
@@ -33,20 +34,6 @@
     padding: 0.5rem;
 }
 
-.filter-btn {
-    padding: 6px 10px;
-    border: 2px solid black;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #000;
-    transition: all 0.3s ease-in-out;
-    font-family: "sub-heading";
-}
-
-.filter-btn:hover {
-    background-color: #ffffff;
-}
 
 .dashboard-table {
     border-collapse: collapse;

@@ -132,3 +132,8 @@
     background: #0056b3;
     color: white;
 }
+
+.edit-filter {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}

@@ -135,7 +135,10 @@ const ManageBatch = () => {
                     <option value="neutral">Neutral</option>
                 </select>
 
-                <button onClick={() => handleFilter('batch')} className="filter-btn">Apply Filters</button>
+                <button onClick={() => handleFilter('batch')} className="btn-filter">Apply Filters</button>
+
+
+
             </div>
 
             {loading ? (<div class="text-center loading-align">
@@ -177,12 +180,12 @@ const ManageBatch = () => {
                                         <td>{time}</td>
                                         <td className={`dashboard-${batch.overall_sentiment}`}>{batch.overall_sentiment || "N/A"}</td>
                                         <td>
-                                            <button onClick={() => navigate(`${batch.id}`)} className="table-btnn">
+                                            <button onClick={() => navigate(`${batch.id}`)} className="btn-filter">
                                                 View Comments
                                             </button>
                                         </td>
                                         <td>
-                                            <button onClick={() => handleDelete(batch.id)} className="confirm-btn">Delete</button>
+                                            <button onClick={() => handleDelete(batch.id)} className="btn-filter">Delete</button>
                                         </td>
                                     </tr>
                                 );
