@@ -116,3 +116,34 @@ body {
 .box:nth-child(odd) {
     flex-direction: row-reverse;
 }
+
+.about-developers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 8rem;
+    gap: 10rem;
+    background-color: red;
+}
+
+.dev-card {
+    background-color: yellow;
+    height: 100%;
+    width: 100%;
+    padding: 4rem 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.dev-image {
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+}
+
+.dev-content {
+    background-color: red;
+    height: 100%;
+    width: 100%;
+}

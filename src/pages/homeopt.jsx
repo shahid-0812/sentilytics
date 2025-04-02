@@ -1,5 +1,6 @@
 import "../styles/homeopt.css";
 import Features from "../components/Features";
+import Developers from "../components/Developers";
 import featuresData from "../api/featuresinfo.json";
 
 function Homeopt() {
@@ -14,6 +15,7 @@ function Homeopt() {
       </div>
       {/* Pass the featuresData to the Features component */}
       <Features features={featuresData} />
+      <Developers />
     </div>
   );
 }

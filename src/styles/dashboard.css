@@ -1,15 +1,20 @@
 .dashboard-layout {
     display: flex;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .dashboard-main-content {
     flex-grow: 1;
     padding: 2rem 3rem;
+    width: 100%;
+    overflow-x: auto;
 }
 
 .dashboard-container {
     padding: 2rem;
     flex-grow: 1;
+    width: 100%;
 }
 
 .dashboard-container h2 {
@@ -26,7 +31,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-
+    flex-wrap: wrap;
 }
 
 .dashboard-filter select {
@@ -34,11 +39,11 @@
     padding: 0.5rem;
 }
 
-
 .dashboard-table {
     border-collapse: collapse;
     border: 2px solid black;
-    width: 90rem;
+    width: 100%;
+    min-width: 800px;
 }
 
 .dashboard-table th {
@@ -50,7 +55,6 @@
 
 .dashboard-table .sort-th {
     cursor: pointer;
-
 }
 
 .dashboard-table .active-sort {
@@ -63,8 +67,6 @@
     border: 2px solid black;
     font-size: 1rem;
 }
-
-
 
 .dashboard-positive {
     color: green;
@@ -107,10 +109,6 @@
     transition: all 0.3s ease-in-out;
 } */
 
-
-
-
-
 .delete-btn:hover {
     background-color: rgb(247, 111, 111);
 }
@@ -119,21 +117,12 @@
     background-color: rgb(111, 247, 111);
 }
 
-
-
-
-
-
-
 .btn-x.active-top {
     background-color: #c9c9c9;
     color: white;
 }
 
 /* From Uiverse.io by SujitAdroja */
-
-
-
 .edit-mode {
     color: #000;
     text-transform: uppercase;
@@ -168,11 +157,6 @@
 .edit-mode:hover::before {
     width: 160%;
 }
-
-
-
-
-
 
 .filter-btnn {
     color: #000;
@@ -209,9 +193,6 @@
     width: 160%;
 }
 
-
-
-
 .table-btnn {
     color: #000;
     text-transform: uppercase;
@@ -247,25 +228,6 @@
 .table-btnn:hover::before {
     width: 160%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .confirm-btn {
     color: #000;

@@ -1,31 +1,28 @@
 .batch-container {
     flex-grow: 1;
     padding: 1rem;
-    
+    width: 100%;
+    overflow-x: auto;
 }
 
 .batch-details h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
-.batch-data{
+
+.batch-data {
     display: flex;
     gap: 2rem;
     font-size: 2rem;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
-
-.loading-align {
-    display: flex;
-    justify-content: center;  /* Centers horizontally */
-    align-items: center;  /* Centers vertically */
-    height: 100%;
-    width: 100%;
-}
 .batch-table {
     border-collapse: collapse;
     border: 2px solid black;
+    width: 100%;
+    min-width: 800px;
 }
 
 .batch-table th {
@@ -42,20 +39,39 @@
     font-size: 1rem;
 }
 
-.batch-table .comment{
+.batch-table .comment {
     text-align: justify;
 }
 
+.chart-container {
+    width: 100%;
+    padding: 2rem;
+}
 
-.batch-chart h3{
-    font-size: 2rem;
+.chart-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
 }
-.chart{
-    display: flex;
-    justify-content: space-around;
+
+.chart {
+    width: 100%;
+    min-width: 300px;
 }
+
 .chart img {
-    height: 25rem;
+    width: 100%;
+    height: auto;
+    max-height: 25rem;
+}
+
+.loading-align {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;  /* Centers vertically */
+    height: 100%;
+    width: 100%;
 }
 
 .batch-positive {
@@ -69,11 +85,13 @@
     text-transform: capitalize;
     font-weight: bold;
 }
+
 .batch-neutral {
     color: grey;
     text-transform: capitalize;
     font-weight: bold;
 }
+
 .loading{
     margin: auto 0;
 }

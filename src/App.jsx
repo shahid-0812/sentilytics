@@ -32,7 +32,7 @@ const UserLayout = () => {
       <div className="main-content">
         <Outlet />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
@@ -44,7 +44,7 @@ const DashboardLayout = () => {
       <div className="dashboard-main-content">
         <Outlet />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
