@@ -46,7 +46,7 @@
     overflow: hidden;
 }
 
-.admin-comment-table th,
+.admin-comment-tabled th,
 .admin-comment-table td {
     padding: 12px;
     text-align: left;

@@ -17,7 +17,7 @@ const MultiComment = () => {
     const [filter, setFilter] = useState("all");
     const [wordcloud, setwordcloud] = useState("");
     const [loading, setLoading] = useState(false);
-    const [activeTab, setActiveTab] = useState("comments"); // Added activeTab state for tab switching
+    const [activeTab, setActiveTab] = useState("comments");
     const barRef = useRef(null);
     const lineRef = useRef(null);
 
@@ -36,7 +36,7 @@ const MultiComment = () => {
         link.download = "wordcloud.png";
         link.click();
     };
-    // Check if user is authenticated
+
     useEffect(() => {
         const token = localStorage.getItem("token");
         if (!token) {
@@ -44,13 +44,11 @@ const MultiComment = () => {
         }
     }, [navigate]);
 
-    // Filter comments based on sentiment
     const filteredComments = analyzedComments.filter((comment) => {
         if (filter === "all") return true;
         return comment.sentiment.toLowerCase() === filter;
     });
 
-    // Handle file change
     const handleFileChange = (event) => {
         const file = event.target.files[0];
         if (file) {
@@ -59,7 +57,6 @@ const MultiComment = () => {
         setFile(event.target.files[0]);
     };
 
-    // Handle column input change
     const handleColumnChange = (event) => {
         setColumn(event.target.value);
     };
@@ -67,7 +64,6 @@ const MultiComment = () => {
         setBatchname(event.target.value);
     };
 
-    // Handle form submission
     const handleSubmit = async (event) => {
         event.preventDefault();
         const token = localStorage.getItem("token");
@@ -113,7 +109,7 @@ const MultiComment = () => {
             {
                 label: "Sentiment Distribution",
                 data: Object.values(BarChart),
-                backgroundColor: ["#F44336", "#FF9800", "#4CAF50"], // Green, Orange, Red
+                backgroundColor: ["#F44336", "#FF9800", "#4CAF50"],
             },
         ],
     };
@@ -131,10 +127,7 @@ const MultiComment = () => {
                     {fileName && <p>File Name: {fileName}</p>}
                     <input type="text" name="column" value={column} onChange={handleColumnChange} placeholder="Enter column name" className="multi-input" disabled={loading} />
                     <input type="text" name="batchname" value={batchname} onChange={handlebatchnameChange} placeholder="Enter batch name" className="multi-input" disabled={loading} />
-                
-                        <input type="submit" value="Submit" className="btn-pages" disabled={loading} />
-                  
-
+                    <input type="submit" value="Submit" className="btn-pages" disabled={loading} />
                 </form>
             </div>
 
@@ -153,26 +146,18 @@ const MultiComment = () => {
                     ) : analyzedComments.length > 0 ? (
                         <>
                             <div className="tab-container">
-
                                 <button onClick={() => navigate(`/batch/${batchId}`)} className="btn-pages">Get More Details</button>
-
                                 {
                                     activeTab === "comments" ? <DownloadButton batch_Id={batchId} comment_type={analyzedComments.comment_type} />
                                         :
                                         <button className="btn-pages" onClick={downloadChart}>Download Chart</button>
-
                                 }
-
                                 <button onClick={() => setActiveTab("comments")} className={`btn-pages ${activeTab === "comments" ? "page-active" : ""}`} > Comments</button>
-
-
                                 <button onClick={() => setActiveTab("chart")} className={`btn-pages ${activeTab === "chart" ? "page-active" : ""}`} > Charts</button>
-
                             </div>
 
                             {activeTab === "chart" && (
                                 <div className="chart-container">
-                                    {/* <h2>Sentiment Distribution</h2> */}
                                     <div className="chart-div">
                                         <div className="chart">
                                             <Bar ref={barRef} data={sentimentData} />
@@ -232,7 +217,7 @@ const MultiComment = () => {
                         <p>No analyzed comments yet.</p>
                     )
                 }
-            </div >
+            </div>
         </>
     );
 };
