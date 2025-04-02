@@ -135,7 +135,7 @@ const ManageBatch = () => {
                     <option value="neutral">Neutral</option>
                 </select>
 
-                <button onClick={() => handleFilter('batch')} className="btn-filter">Apply Filters</button>
+                <button onClick={() => handleFilter('batch')} className="btn-pages-small">Apply Filters</button>
 
 
 
@@ -185,7 +185,7 @@ const ManageBatch = () => {
                                             </button>
                                         </td>
                                         <td>
-                                            <button onClick={() => handleDelete(batch.id)} className="btn-filter">Delete</button>
+                                            <button onClick={() => handleDelete(batch.id)} className="btn-filter delete-btn">Delete</button>
                                         </td>
                                     </tr>
                                 );

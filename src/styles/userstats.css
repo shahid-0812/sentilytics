@@ -199,15 +199,7 @@
 
 
 
-.btn-dash-top {
-  width: 14rem;
-  --button_radius: 0.75em;
-  --button_color: #ffffff;
-  --button_outline_color: #000000;
-  font-weight: bold;
-  background-color: var(--button_outline_color);
-  border-radius: var(--button_radius);
-}
+
 
 .active {
   background-color: red;

@@ -1,1 +1,66 @@
 @import 'bootstrap-icons/font/bootstrap-icons.css';
+
+.btn-big {
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "sub-heading";
+    font-weight: 100;
+    width: 14rem;
+    display: block;
+    box-sizing: border-box;
+    color: black;
+    padding: 0.75em 1.5em;
+    transition: 0.3s ease;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.btn-big:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-pages {
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "sub-heading";
+    font-weight: 100;
+    width: 14rem;
+    display: block;
+    box-sizing: border-box;
+    color: black;
+    padding: 0.75em 1.5em;
+    transition: 0.3s ease;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.btn-pages:hover {
+    background-color: black;
+    color: white;
+}
+
+.page-active {
+    background-color: black;
+    color: white;
+}
+
+.btn-pages-small {
+    cursor: pointer;
+    font-family: "sub-heading";
+    font-weight: 100;
+    width: 10rem;
+    display: block;
+    box-sizing: border-box;
+    color: black;
+    font-family: "sub-heading";
+    padding: 0.75em 0.5rem;
+    transition: 0.3s ease;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.btn-pages-small:hover {
+    background-color: black;
+    color: white;
+}

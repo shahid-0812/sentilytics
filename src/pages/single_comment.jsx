@@ -54,9 +54,9 @@ function SingleComment() {
                     onChange={(e) => setText(e.target.value)}
                 />
 
-                <div className="submit-top">
-                    <input type="submit" value={loading ? "Analyzing..." : "Submit"} className="multi-submit" disabled={loading} />
-                </div>
+              
+                    <input type="submit" value={loading ? "Analyzing..." : "Submit"} className="btn-pages" disabled={loading} />
+              
 
                 {analyzedComment && (
                     <div className="analysis-result">

@@ -112,9 +112,9 @@ const YoutubeComment = () => {
                     <label htmlFor="url" className='yt-label'>Enter URL : </label>
                     <input type="text" id="url" name="vid_url" className="yt-input" onChange={handlevidnChange} disabled={loading} placeholder='Youtube URL' />
                     <input type="text" name="batchname" value={batchname} onChange={handlebatchnameChange} placeholder="Enter batch name" className="multi-input" disabled={loading} />
-                    <div className="submit-top">
-                        <input type="submit" value="Submit" className="multi-submit" disabled={loading} />
-                    </div>
+
+                    <input type="submit" value="Submit" className="btn-pages" disabled={loading} />
+
                 </form>
             </div>
 
@@ -133,15 +133,15 @@ const YoutubeComment = () => {
                     ) : analyzedComments.length > 0 ? (
                         <>
                             <div className="tab-container">
-                                <div className="btn-x-top">
-                                    <button onClick={() => navigate(`/batch/${batchId}`)} className="btn-x">Get More Details</button>
-                                </div>
+
+                                <button onClick={() => navigate(`/batch/${batchId}`)} className="btn-pages">Get More Details</button>
+
 
                                 {
                                     activeTab === "comments" ? <DownloadButton batch_Id={batchId} comment_type="Youtube" />
-                                        : <div className="btn-x-top">
-                                            <button onClick={downloadChart} className="btn-x" >Download Charts</button>
-                                        </div>
+                                        :
+                                        <button onClick={downloadChart} className="btn-pages" >Download Charts</button>
+
 
                                 }
 
@@ -149,14 +149,14 @@ const YoutubeComment = () => {
 
 
 
-                                <div className="btn-x-top">
-                                    <button onClick={() => setActiveTab("comments")} className={`btn-x ${activeTab === "comments" ? "active" : ""}`} > Comments</button>
-                                </div>
+
+                                <button onClick={() => setActiveTab("comments")} className={`btn-pages ${activeTab === "comments" ? "page-active" : ""}`} > Comments</button>
 
 
-                                <div className="btn-x-top">
-                                    <button onClick={() => setActiveTab("chart")} className={`btn-x ${activeTab === "chart" ? "active" : ""}`} > Charts</button>
-                                </div>
+
+
+                                <button onClick={() => setActiveTab("chart")} className={`btn-pages ${activeTab === "chart" ? "page-active" : ""}`} > Charts</button>
+
 
                             </div>
 

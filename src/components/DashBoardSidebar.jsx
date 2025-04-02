@@ -32,31 +32,31 @@ const DashboardSidebar = () => {
 
 
             <div className="sidebar">
-                <div className="btn-dash-top">
-                    <Link className="btn-dash" to="/dashboard/stats">
-                        <i className="bi bi-person-fill"></i>
-                        User Statistics</Link>
-                </div>
-                <div className="btn-dash-top">
-                    <Link className="btn-dash" to="/dashboard/comments">
-                        <i className="bi bi-chat"></i>
-                        Single Comment</Link>
-                </div>
-                <div className="btn-dash-top">
-                    <Link className="btn-dash" to="/dashboard/batch">
-                        <i class="bi bi-collection"></i>
-                        Batch Comments</Link>
-                </div>
-                <div className="btn-dash-top">
-                    <Link className="btn-dash" to="/">
-                        <i className="bi bi-box-arrow-right"></i>
-                        Exit Dashboard</Link>
-                </div>
-                <div className="log-out">
-                    <div className="btn-dash-top dash-logout">
-                        <div className="btn-dash " onClick={handleLogout}>Log Out</div>
-                    </div>
-                </div>
+
+                <Link className="btn-big dash" to="/dashboard/stats">
+                    <i className="bi bi-person-fill"></i>
+                    User Statistics
+                </Link>
+
+
+                <Link className="btn-big dash" to="/dashboard/comments">
+                    <i className="bi bi-chat"></i>
+                    Single Comment</Link>
+
+
+                <Link className="btn-big dash" to="/dashboard/batch">
+                    <i class="bi bi-collection"></i>
+                    Batch Comments</Link>
+
+
+                <Link className="btn-big dash" to="/">
+                    <i className="bi bi-box-arrow-right"></i>
+                    Exit Dashboard</Link>
+
+
+                <div className="btn-big dash-logout" onClick={handleLogout}>Log Out</div>
+
+
             </div>
 
 

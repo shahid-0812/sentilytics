@@ -8,7 +8,6 @@
 }
 
 .dashboard-container {
-    /* background-color: red; */
     padding: 2rem;
     flex-grow: 1;
 }
@@ -27,6 +26,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+
 }
 
 .dashboard-filter select {
@@ -38,6 +38,7 @@
 .dashboard-table {
     border-collapse: collapse;
     border: 2px solid black;
+    width: 90rem;
 }
 
 .dashboard-table th {
@@ -49,6 +50,7 @@
 
 .dashboard-table .sort-th {
     cursor: pointer;
+
 }
 
 .dashboard-table .active-sort {
@@ -109,7 +111,13 @@
 
 
 
+.delete-btn:hover {
+    background-color: rgb(247, 111, 111);
+}
 
+.btn-confirm:hover {
+    background-color: rgb(111, 247, 111);
+}
 
 
 

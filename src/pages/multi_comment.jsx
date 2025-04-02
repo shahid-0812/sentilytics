@@ -131,9 +131,9 @@ const MultiComment = () => {
                     {fileName && <p>File Name: {fileName}</p>}
                     <input type="text" name="column" value={column} onChange={handleColumnChange} placeholder="Enter column name" className="multi-input" disabled={loading} />
                     <input type="text" name="batchname" value={batchname} onChange={handlebatchnameChange} placeholder="Enter batch name" className="multi-input" disabled={loading} />
-                    <div className="submit-top">
-                        <input type="submit" value="Submit" className="multi-submit" disabled={loading} />
-                    </div>
+                
+                        <input type="submit" value="Submit" className="btn-pages" disabled={loading} />
+                  
 
                 </form>
             </div>
@@ -153,21 +153,21 @@ const MultiComment = () => {
                     ) : analyzedComments.length > 0 ? (
                         <>
                             <div className="tab-container">
-                                <div className="btn-x-top">
-                                    <button onClick={() => navigate(`/batch/${batchId}`)} className="btn-x">Get More Details</button>
-                                </div>
+
+                                <button onClick={() => navigate(`/batch/${batchId}`)} className="btn-pages">Get More Details</button>
+
                                 {
                                     activeTab === "comments" ? <DownloadButton batch_Id={batchId} comment_type={analyzedComments.comment_type} />
-                                        : <div className="btn-x-top">
-                                            <button className="btn-x" onClick={downloadChart}>Download Chart</button>
-                                        </div>
+                                        :
+                                        <button className="btn-pages" onClick={downloadChart}>Download Chart</button>
+
                                 }
-                                <div className="btn-x-top">
-                                    <button onClick={() => setActiveTab("comments")} className={`btn-x ${activeTab === "comments" ? "active" : ""}`} > Comments</button>
-                                </div>
-                                <div className="btn-x-top">
-                                    <button onClick={() => setActiveTab("chart")} className={`btn-x ${activeTab === "chart" ? "active" : ""}`} > Charts</button>
-                                </div>
+
+                                <button onClick={() => setActiveTab("comments")} className={`btn-pages ${activeTab === "comments" ? "page-active" : ""}`} > Comments</button>
+
+
+                                <button onClick={() => setActiveTab("chart")} className={`btn-pages ${activeTab === "chart" ? "page-active" : ""}`} > Charts</button>
+
                             </div>
 
                             {activeTab === "chart" && (

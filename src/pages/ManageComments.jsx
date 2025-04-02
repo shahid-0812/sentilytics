@@ -166,7 +166,7 @@ const ManageComments = () => {
                 <h3>Your Single Comments</h3>
                 <div className="dashboard-filter">
                     <p>Note: If the model predicted a comment sentiment incorrectly, you can correct it below.</p>
-                    <button className="btn-filter" onClick={toggleEditMode}>{editMode ? "Exit Edit Mode" : "Enable Edit Mode"}</button>
+                    <button className="btn-pages-small" onClick={toggleEditMode}>{editMode ? "Exit Edit Mode" : "Enable Edit Mode"}</button>
                     <label>Filter by Sentiment:</label>
                     <select value={filterSentiment} onChange={(e) => setFilterSentiment(e.target.value)}>
                         <option value="">All</option>
@@ -175,7 +175,7 @@ const ManageComments = () => {
                         <option value="neutral">Neutral</option>
                     </select>
 
-                    <button onClick={() => handleFilter('single')} className="btn-filter">Apply Filters</button>
+                    <button onClick={() => handleFilter('single')} className="btn-pages-small">Apply Filters</button>
                 </div>
                 {loading ? (
                     <div class="text-center loading-align">
@@ -234,13 +234,13 @@ const ManageComments = () => {
                                                     !comment.is_updated ? (
                                                         <><td>
                                                             <button
-                                                                className="btn-filter"
+                                                                className="btn-filter btn-confirm"
                                                                 onClick={() => handleSubmitEdit(comment)} disabled={loadingEdits[comment.id]}>
                                                                 {loadingEdits[comment.id] ? "Saving..." : "Confirm"}
                                                             </button>
                                                         </td>
                                                             <td>
-                                                                <button onClick={() => handleDelete(comment.id)} className="btn-filter">Delete</button>
+                                                                <button onClick={() => handleDelete(comment.id)} className="btn-filter delete-btn">Delete</button>
                                                             </td>
                                                             <td>---</td></>
                                                     ) : <>

@@ -42,9 +42,9 @@ const DownloadButton = ({ batch_Id, comment_type }) => {
     };
     return (
 
-        <div className="btn-x-top">
-            <button className="btn-x" onClick={handleDownload} disabled={isDownloading}>{isDownloading ? "Downloading..." : "Download Excel"}</button>
-        </div>
+
+        <button className="btn-pages" onClick={handleDownload} disabled={isDownloading}>{isDownloading ? "Downloading..." : "Download Excel"}</button>
+
         // <button className="btn-download" onClick={handleDownload} disabled={isDownloading}>{isDownloading ? "Downloading..." : "Download Excel"}</button>
     );
 }

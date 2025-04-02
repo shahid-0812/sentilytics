@@ -185,15 +185,15 @@ const BatchDetails = () => {
                     <p><strong>Date Created:</strong> {formatDate(batchData?.date_created)}</p>
                 </div>
                 <div className="tab-container">
-                    <button className={`tab ${activeTab === "comments" ? "active" : ""}`} onClick={() => { setActiveTab("comments"); }}>
+                    <button className={`btn-pages ${activeTab === "comments" ? "page-active" : ""}`} onClick={() => { setActiveTab("comments"); }}>
                         Comments
                     </button>
-                    <button className={`tab ${activeTab === "chart" ? "active" : ""}`} onClick={() => { setActiveTab("chart"); }}>
+                    <button className={`btn-pages ${activeTab === "chart" ? "page-active" : ""}`} onClick={() => { setActiveTab("chart"); }}>
                         Charts
                     </button>
                     {activeTab === "comments" ? <DownloadButton batch_Id={batch_id} comment_type={batchData?.comment_type} />
-                        : <button className="btn-download" onClick={downloadChart}>Download Chart</button>}
-                    <button onClick={() => handleDelete(batch_id)} className="confirm-btn">Delete</button>
+                        : <button className="btn-pages" onClick={downloadChart}>Download Chart</button>}
+                    <button onClick={() => handleDelete(batch_id)} className="btn-pages delete-btn">Delete</button>
                 </div>
             </div>
             {activeTab === "chart" && (

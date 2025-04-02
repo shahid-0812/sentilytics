@@ -40,28 +40,28 @@
 
 body {
     background-color: #F7F4EF;
+    margin: 0;
+    min-height: 100vh;
 }
 
 .home-container {
-    /* background-color: red; */
-    height: 100vh;
-
-
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: yellow; */
-    height: 87%;
+    min-height: 87vh;
     gap: 5rem;
+    padding: 2rem 0;
 }
 
 .hero-text {
     text-align: center;
     width: 40rem;
-    /* background-color: red; */
     padding: 3rem;
     display: flex;
     align-items: center;
@@ -71,14 +71,12 @@ body {
 
 .hero-text h1 {
     font-size: 5rem;
-    /* background-color: yellow; */
     font-family: "heading";
     line-height: 5rem;
 
 }
 
 .hero-text p {
-    /* background-color: yellow; */
     font-family: "sub-heading";
     margin: 1rem;
 
@@ -125,13 +123,13 @@ body {
 
 .home-features {
     width: 100%;
-    height: auto;
-    /* background-color: green; */
+    min-height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 0rem;
+    padding: 4rem 0;
     gap: 10rem;
+    flex: 1;
 }
 
 .box:nth-child(odd) {
@@ -144,7 +142,6 @@ body {
 }
 
 .box {
-    /* background-color: red; */
     display: flex;
     padding: 0 4rem;
     width: 70%;
@@ -153,7 +150,6 @@ body {
 }
 
 .box-text {
-    /* background-color: #fff; */
     display: flex;
     flex-direction: column;
     width: 60%;

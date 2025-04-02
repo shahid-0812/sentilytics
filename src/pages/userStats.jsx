@@ -80,7 +80,7 @@ const UserStats = () => {
                 <DatePicker className="date-picker" selected={startDate} maxDate={endDate ? endDate : new Date()} onChange={(date) => setStartDate(date)} placeholderText="Start Date" />
                 <DatePicker className="date-picker" selected={endDate} maxDate={new Date()} minDate={startDate} onChange={(date) => setEndDate(date)} placeholderText="End Date" />
 
-                <button onClick={fetchStats} className="btn-filter">Apply Filter</button>
+                <button onClick={fetchStats} className="btn-pages-small">Apply Filter</button>
 
             </div>
 

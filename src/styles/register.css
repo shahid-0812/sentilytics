@@ -18,8 +18,6 @@ body {
     font-family: "sub-heading";
 }
 
-
-
 .register-container {
     height: 100vh;
     display: flex;
@@ -38,19 +36,17 @@ body {
 
 .register-card {
     background-color: #f5f5f5;
-    height: 80%;
+    height: auto; /* Changed from fixed 80% to auto for responsiveness */
     width: 30%;
+    min-width: 320px;
     padding: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: .5rem;
-    /* border-radius: 1rem; */
+    gap: 0.5rem;
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
 }
-
-
 
 .register-card h1 {
     font-size: 3.5rem;
@@ -64,14 +60,13 @@ body {
     align-items: stretch;
     justify-content: center;
     width: 100%;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
 .register-form label {
     font-family: "sub-heading";
     font-size: 1rem;
     color: #202020;
-    margin-bottom: 0rem;
 }
 
 .register-input {
@@ -84,10 +79,28 @@ body {
     background-color: #fff;
     color: #374151;
     box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
+/* Add styles for error state on inputs */
+.error-input {
+    border-color: #e53e3e;
+    background-color: #fff5f5;
+}
 
+/* Error message styling */
+.error-message {
+    color: #e53e3e;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    font-weight: bold;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 .register-btn {
     --button_radius: 0.75em;
@@ -95,7 +108,6 @@ body {
     --button_outline_color: #000000;
     font-weight: bold;
     width: 100%;
-    padding: 1;
     background-color: var(--button_outline_color);
     border-radius: var(--button_radius);
     align-self: center;
@@ -136,4 +148,26 @@ body {
 .register-form a {
     color: #000;
     text-decoration: underline;
+}
+
+.password-instruction {
+    margin-left: 15px;
+    font-size: 0.85rem;
+    color: #4a5568;
+}
+
+.password-instruction li {
+    margin: 0.5rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .register-card {
+        width: 90%;
+        padding: 2rem;
+    }
+    
+    .register-card h1 {
+        font-size: 2.5rem;
+    }
 }

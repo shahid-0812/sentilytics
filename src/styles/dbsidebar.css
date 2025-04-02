@@ -134,3 +134,17 @@
 .dashboard-sidebar .logout:hover {
     background-color: #c0392b;
 }
+
+.dash i {
+    margin-right: 10px;
+}
+
+.dash-logout {
+    text-align: center;
+    background-color: rgb(252, 77, 77);
+}
+
+.dash-logout:hover {
+    background-color: rgb(219, 44, 44);
+    color: black;
+}
