@@ -7,12 +7,13 @@
     padding: 20px;
     background: #fff;
     border-radius: 8px;
+    background-color: red;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Heading */
 .admin-comment-header {
-    
+
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -23,7 +24,7 @@
 /* Search & Filter Section */
 .admin-comment-controls {
     display: flex;
-    
+
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
@@ -57,7 +58,7 @@
     background: #007bff;
     color: #fff;
     font-weight: 600;
-    
+
 }
 
 .admin-comment-table tr:hover {
@@ -88,7 +89,7 @@
     cursor: pointer;
     font-size: 14px;
     transition: all 0.3s;
-    
+
 }
 
 .admin-btn.delete {

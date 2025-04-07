@@ -1,6 +1,4 @@
-.detail-btn {
-    width: 10rem;
-}
+
 
 .multi-container {
     display: flex;
@@ -59,56 +57,9 @@
     display: none;
 }
 
-.multi-input {
-    width: 20rem;
-    height: 2.5rem;
-    padding: 1.5rem 1rem;
-    border: 2px solid #000;
-    border-radius: 0.5rem;
-    font-family: "sub-heading";
-    transition: 0.3s ease-in;
-    color: #000;
-    font-size: 1rem;
-}
 
-.multi-input::placeholder {
-    color: #000;
-    opacity: 0.5;
-}
 
-.multi-input:hover {
-    background-color: #fff;
-}
 
-.multi-input:focus {
-    border: 2px solid #fff;
-}
-
-.submit-top {
-    width: 15rem;
-    --button_radius: 0.75em;
-    --button_color: #ffffff;
-    --button_outline_color: #000000;
-    font-weight: bold;
-    background-color: var(--button_outline_color);
-    border-radius: var(--button_radius);
-}
-
-.multi-submit {
-    cursor: pointer;
-    font-size: 16px;
-    font-family: "sub-heading";
-    width: 15rem;
-    display: block;
-    box-sizing: border-box;
-    border: 2px solid var(--button_outline_color);
-    border-radius: var(--button_radius);
-    padding: 0.75em 1.5em;
-    background: var(--button_color);
-    color: var(--button_outline_color);
-    transform: translateY(-0.2em);
-    transition: transform 0.1s ease;
-}
 
 .submit-top:hover .multi-submit {
     transform: translateY(-0.33em);
@@ -134,38 +85,8 @@
     color: #252525;
 }
 
-.multi-detail-btn {
-    padding: 1rem 0.5rem;
-    text-align: center;
-    background-color: #75D198;
-    font-family: "sub-heading";
-    font-size: 1rem;
-    border-radius: 1rem;
-    color: #000;
-    text-decoration: none;
-    transition: .2s ease-in;
-    display: inline-block;
-    border: 2px solid #000;
-    cursor: pointer;
-}
 
-.multi-detail-btn:hover {
-    background-color: #fff;
-    color: #252525;
-    border: 2px solid #252525;
-}
 
-.multi-detail-btn:active {
-    background-color: #252525;
-    color: #fff;
-    transform: scale(0.9);
-}
-
-.multi-table {
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid black;
-}
 
 .multi-table th {
     padding: 1rem;
@@ -185,12 +106,7 @@
     text-align: justify;
 }
 
-.multi-chart {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
+
 
 .multi-chart h3 {
     font-size: 2rem;
@@ -205,48 +121,6 @@
     height: 25rem;
 }
 
-.multi-positive {
-    color: green;
-    text-transform: capitalize;
-    font-weight: bold;
-}
 
-.multi-negative {
-    color: red;
-    text-transform: capitalize;
-    font-weight: bold;
-}
 
-.multi-neutral {
-    color: grey;
-    text-transform: capitalize;
-    font-weight: bold;
-}
 
-.active {
-    background-color: red;
-}
-
-.btn-x {
-    cursor: pointer;
-    font-size: 16px;
-    font-family: "sub-heading";
-    width: 12rem;
-    display: block;
-    box-sizing: border-box;
-    border: 2px solid var(--button_outline_color);
-    border-radius: var(--button_radius);
-    padding: 0.75em 1.5em;
-    background: var(--button_color);
-    color: var(--button_outline_color);
-    transform: translateY(-0.2em);
-    transition: transform 0.1s ease;
-}
-
-.btn-x-top:hover .btn-x {
-    transform: translateY(-0.33em);
-}
-
-.btn-x-top:active .btn-x {
-    transform: translateY(0);
-}

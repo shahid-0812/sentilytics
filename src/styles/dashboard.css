@@ -97,6 +97,8 @@
     margin-bottom: 1.5rem;
 }
 
+
+
 /* .tab {
     padding: 10px 20px;
     border: none;
@@ -109,13 +111,6 @@
     transition: all 0.3s ease-in-out;
 } */
 
-.delete-btn:hover {
-    background-color: rgb(247, 111, 111);
-}
-
-.btn-confirm:hover {
-    background-color: rgb(111, 247, 111);
-}
 
 .btn-x.active-top {
     background-color: #c9c9c9;
@@ -264,3 +259,14 @@
 .confirm-btn:hover::before {
     width: 160%;
 }
+
+
+
+
+
+
+
+
+
+
+

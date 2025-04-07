@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
 }
 
-/* Main container for the home page */
+
 .home-container {
     display: flex;
     flex-direction: column;
@@ -18,20 +18,19 @@ body {
     width: 100%;
 }
 
-/* Hero Section */
 .hero-section {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 87vh;
-    gap: 5rem;
+    gap: 3rem;
     padding: 5rem 0;
     width: 100%;
 }
 
 .hero-text {
     text-align: center;
-    width: 40rem;
+    width: 35rem;
     padding: 3rem;
     display: flex;
     align-items: center;
@@ -40,9 +39,9 @@ body {
 }
 
 .hero-text h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: "heading";
-    line-height: 5rem;
+    line-height: 3rem;
 }
 
 .hero-text p {
@@ -50,11 +49,9 @@ body {
     margin: 1rem;
 }
 
-/* Placeholder for images in the hero section */
+
 .image-placeholder {
-    width: 30%;
-    height: 80%;
-    background-color: #ff1515;
+    width: 700px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -64,7 +61,14 @@ body {
     font-weight: bold;
 }
 
-/* Features section */
+.image-placeholder img{
+    height: 450px;
+}
+
+.image-placeholder img{
+    border-radius: 10px;
+}
+
 .home-features {
     display: flex;
     flex-direction: column;
@@ -80,15 +84,12 @@ body {
     font-size: 4rem;
 }
 
-/* Box containing individual feature details */
 .box {
-    /* background-color: yellow; */
     display: flex;
     align-items: center;
     padding: 0 4rem;
-    width: 65%;
+    width: 75%;
     gap: 8rem;
-    /* background-color: red; */
 }
 
 .box-text {
@@ -116,38 +117,7 @@ body {
     background-size: cover;
 }
 
-/* Adjust layout for odd-indexed features */
+
 .box:nth-child(odd) {
     flex-direction: row-reverse;
-}
-
-.about-developers {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 8rem;
-    gap: 10rem;
-    background-color: red;
-}
-
-.dev-card {
-    background-color: yellow;
-    height: 100%;
-    width: 100%;
-    padding: 4rem 8rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.dev-image {
-    background-color: blue;
-    height: 100%;
-    width: 100%;
-}
-
-.dev-content {
-    background-color: red;
-    height: 100%;
-    width: 100%;
 }
